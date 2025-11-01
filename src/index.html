@@ -19,26 +19,30 @@
 <!-- NAVBAR -->
 <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out">
   <nav id="navbar"
-       class="w-full flex items-center justify-between px-6 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out">
-    <!-- Kiri: Logo -->
-    <a href="#home" class="flex items-center gap-2 text-2xl font-semibold tracking-wide">
-      <i data-lucide="brain-circuit" class="w-6 h-6 text-white"></i>
-      THINKLAB
+       class="w-full flex items-center justify-between px-16 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out">
+    <!-- Logo (lebih ke kanan sedikit) -->
+    <a href="#home" class="flex items-center gap-2 text-2xl font-semibold tracking-wide ml-6">
+      <i data-lucide="brain-circuit" class="w-6 h-6 text-white"></i> THINKLAB
     </a>
 
-    <!-- Tengah: Menu -->
-    <ul class="hidden md:flex gap-10 text-[15px] font-medium items-center mx-auto">
+    <!-- Menu Tengah -->
+    <ul class="hidden md:flex gap-8 text-[15px] font-medium items-center mx-auto">
       <li><a href="#home" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="house" class="w-4 h-4"></i>Home</a></li>
       <li><a href="#services" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="message-square-text" class="w-4 h-4"></i>Services</a></li>
       <li><a href="#training" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="book-open" class="w-4 h-4"></i>Training</a></li>
       <li><a href="#about" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="users" class="w-4 h-4"></i>About</a></li>
       <li><a href="#news" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="newspaper" class="w-4 h-4"></i>News</a></li>
       <li><a href="#events" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="briefcase" class="w-4 h-4"></i>Events</a></li>
-      <li><a href="#contact" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="message-circle" class="w-4 h-4"></i>Contact</a></li>
+      <li>
+        <a href="#contact"
+           class="flex items-center gap-2 bg-[#A61C3C] hover:bg-[#8C1633] text-white px-4 py-2 rounded-full transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>Contact
+        </a>
+      </li>
     </ul>
 
-    <!-- Tombol Menu Mobile -->
-    <button id="menuBtn" class="md:hidden">
+    <!-- Tombol Mobile -->
+    <button id="menuBtn" class="md:hidden mr-6">
       <i data-lucide="menu" class="w-6 h-6"></i>
     </button>
   </nav>
@@ -52,7 +56,7 @@
     <a href="#about" class="py-2 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4"></i>About</a>
     <a href="#news" class="py-2 flex items-center gap-2"><i data-lucide="newspaper" class="w-4 h-4"></i>News</a>
     <a href="#events" class="py-2 flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4"></i>Events</a>
-    <a href="#contact" class="py-2 flex items-center gap-2 text-[#A61C3C]"><i data-lucide="message-circle" class="w-4 h-4"></i>Contact</a>
+    <a href="#contact" class="py-2 flex items-center gap-2 bg-[#A61C3C] text-white px-4 rounded-lg"><i data-lucide="message-circle" class="w-4 h-4"></i>Contact</a>
   </div>
 </header>
 
@@ -90,9 +94,9 @@ const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>{
   const y=window.scrollY;
   if(y>50){
-    navbar.className="w-full flex items-center justify-between px-6 py-3 mt-5 bg-white/50 backdrop-blur-xl text-gray-900 rounded-full shadow-md transition-all duration-500 ease-in-out";
+    navbar.className="w-full flex items-center justify-between px-16 py-3 mt-5 bg-white/50 backdrop-blur-xl text-gray-900 rounded-full shadow-md transition-all duration-500 ease-in-out";
   }else{
-    navbar.className="w-full flex items-center justify-between px-6 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out";
+    navbar.className="w-full flex items-center justify-between px-16 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out";
   }
   lucide.createIcons();
 });
