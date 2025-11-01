@@ -19,15 +19,17 @@
 <!-- NAVBAR -->
 <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out">
   <nav id="navbar"
-       class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out">
-    <a href="#home" class="text-2xl font-semibold tracking-wide">THINKLAB</a>
-    <ul class="hidden md:flex gap-8 text-[15px] font-medium">
-      <li><a href="#home" class="hover:text-[#A61C3C]">Home</a></li>
-      <li><a href="#services" class="hover:text-[#A61C3C]">Services</a></li>
-      <li><a href="#about" class="hover:text-[#A61C3C]">About</a></li>
-      <li><a href="#contact" class="hover:text-[#A61C3C]">Contact</a></li>
-    </ul>
-    <button id="menuBtn" class="md:hidden"><i data-lucide="menu" class="w-6 h-6"></i></button>
+       class="w-full flex items-center justify-between px-6 py-4 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out">
+    <div class="max-w-6xl w-full mx-auto flex items-center justify-between">
+      <a href="#home" class="text-2xl font-semibold tracking-wide">THINKLAB</a>
+      <ul class="hidden md:flex gap-8 text-[15px] font-medium">
+        <li><a href="#home" class="hover:text-[#A61C3C]">Home</a></li>
+        <li><a href="#services" class="hover:text-[#A61C3C]">Services</a></li>
+        <li><a href="#about" class="hover:text-[#A61C3C]">About</a></li>
+        <li><a href="#contact" class="hover:text-[#A61C3C]">Contact</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
   </nav>
   <div id="mobileMenu"
        class="hidden md:hidden flex-col bg-white/80 backdrop-blur-md text-[#2D3142] font-medium px-6 pb-4 transition-all duration-300">
@@ -63,40 +65,28 @@
 <!-- SERVICES -->
 <section id="services" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-semibold text-[#2D3142] mb-3" data-aos="fade-up">
-      Our Product & Services
-    </h2>
-    <p class="text-[#8B8B8B] mb-12" data-aos="fade-up" data-aos-delay="80">
-      Solusi statistik profesional untuk akademik, bisnis, dan riset.
-    </p>
+    <h2 class="text-4xl font-semibold text-[#2D3142] mb-3" data-aos="fade-up">Our Product & Services</h2>
+    <p class="text-[#8B8B8B] mb-12" data-aos="fade-up" data-aos-delay="80">Solusi statistik profesional untuk akademik, bisnis, dan riset.</p>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div class="border border-[#E8E8E8] rounded-2xl p-8" data-aos="fade-right">
         <i data-lucide="bar-chart-3" class="w-10 h-10 text-[#A61C3C] mb-4"></i>
         <h3 class="text-xl font-semibold mb-2">Data Analysis</h3>
-        <p class="text-[#8B8B8B] text-[15px]">
-          Comprehensive analysis for business, research, and academics.
-        </p>
+        <p class="text-[#8B8B8B] text-[15px]">Comprehensive analysis for business, research, and academics.</p>
       </div>
       <div class="border border-[#E8E8E8] rounded-2xl p-8" data-aos="fade-up" data-aos-delay="50">
         <i data-lucide="clipboard-list" class="w-10 h-10 text-[#A61C3C] mb-4"></i>
         <h3 class="text-xl font-semibold mb-2">Survey</h3>
-        <p class="text-[#8B8B8B] text-[15px]">
-          Design & interpretation of quantitative and qualitative surveys.
-        </p>
+        <p class="text-[#8B8B8B] text-[15px]">Design & interpretation of quantitative and qualitative surveys.</p>
       </div>
       <div class="border border-[#E8E8E8] rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
         <i data-lucide="users" class="w-10 h-10 text-[#A61C3C] mb-4"></i>
         <h3 class="text-xl font-semibold mb-2">Konsultasi Statistika</h3>
-        <p class="text-[#8B8B8B] text-[15px]">
-          Professional guidance for statistical methods & modeling.
-        </p>
+        <p class="text-[#8B8B8B] text-[15px]">Professional guidance for statistical methods & modeling.</p>
       </div>
       <div class="border border-[#E8E8E8] rounded-2xl p-8" data-aos="fade-left" data-aos-delay="150">
         <i data-lucide="laptop" class="w-10 h-10 text-[#A61C3C] mb-4"></i>
         <h3 class="text-xl font-semibold mb-2">Pelatihan Software</h3>
-        <p class="text-[#8B8B8B] text-[15px]">
-          SPSS, R, Python, dan tools analitik lainnya.
-        </p>
+        <p class="text-[#8B8B8B] text-[15px]">SPSS, R, Python, dan tools analitik lainnya.</p>
       </div>
     </div>
   </div>
@@ -107,22 +97,15 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
     <div data-aos="fade-right">
       <h2 class="text-4xl font-semibold text-[#2D3142] mb-6">About Us</h2>
-      <p class="text-[#8B8B8B] mb-4">
-        Nama THINKLAB berasal dari gabungan “Think” (rasional & kritis) dan “Lab” (ruang eksperimen ilmiah).
-        Filosofi kami berakar pada proses berpikir analitis berbasis data dan bukti empiris.
-      </p>
-      <p class="text-[#8B8B8B]">
-        Kami meyakini setiap keputusan dan inovasi harus lahir dari perpaduan logika, data, dan nilai praktis.
-      </p>
+      <p class="text-[#8B8B8B] mb-4">Nama THINKLAB berasal dari gabungan “Think” (rasional & kritis) dan “Lab” (ruang eksperimen ilmiah). Filosofi kami berakar pada proses berpikir analitis berbasis data dan bukti empiris.</p>
+      <p class="text-[#8B8B8B]">Kami meyakini setiap keputusan dan inovasi harus lahir dari perpaduan logika, data, dan nilai praktis.</p>
     </div>
     <div data-aos="fade-left" class="space-y-6">
       <div class="border border-[#E8E8E8] rounded-2xl p-6 flex gap-4">
         <i data-lucide="flag" class="w-10 h-10 text-[#A61C3C]"></i>
         <div>
           <h3 class="text-lg font-semibold text-[#2D3142] mb-1">Visi</h3>
-          <p class="text-[#8B8B8B] text-[15px]">
-            Menjadi konsultan statistik terpercaya yang profesional, akurat, dan inovatif.
-          </p>
+          <p class="text-[#8B8B8B] text-[15px]">Menjadi konsultan statistik terpercaya yang profesional, akurat, dan inovatif.</p>
         </div>
       </div>
       <div class="border border-[#E8E8E8] rounded-2xl p-6 flex gap-4">
@@ -144,12 +127,8 @@
 <!-- CONTACT -->
 <section id="contact" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-semibold text-[#2D3142] mb-3" data-aos="fade-up">
-      Hubungi Kami
-    </h2>
-    <p class="text-[#8B8B8B] mb-12" data-aos="fade-up" data-aos-delay="80">
-      Kami siap bantu kebutuhan analisis data Anda.
-    </p>
+    <h2 class="text-4xl font-semibold text-[#2D3142] mb-3" data-aos="fade-up">Hubungi Kami</h2>
+    <p class="text-[#8B8B8B] mb-12" data-aos="fade-up" data-aos-delay="80">Kami siap bantu kebutuhan analisis data Anda.</p>
     <div class="grid md:grid-cols-2 gap-10 text-left">
       <div class="border border-[#E8E8E8] rounded-2xl p-8 space-y-6" data-aos="fade-right">
         <div class="flex gap-3 text-[#A61C3C]">
@@ -173,9 +152,7 @@
         <input type="email" class="w-full border border-[#E8E8E8] rounded-lg px-3 py-2 mb-4" required>
         <label class="block mb-2 font-semibold">Message</label>
         <textarea rows="4" class="w-full border border-[#E8E8E8] rounded-lg px-3 py-2 mb-6" required></textarea>
-        <button class="bg-[#A61C3C] hover:bg-[#8C1633] text-white px-6 py-3 rounded-lg w-full transition">
-          Send Message
-        </button>
+        <button class="bg-[#A61C3C] hover:bg-[#8C1633] text-white px-6 py-3 rounded-lg w-full transition">Send Message</button>
       </form>
     </div>
   </div>
@@ -184,32 +161,11 @@
 <!-- FOOTER -->
 <footer class="bg-[#2D3142] text-white">
   <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
-    <div>
-      <h3 class="text-2xl font-semibold">THINKLAB</h3>
-      <p class="text-sm text-white/70 mt-2">Turning Data Into Direction</p>
-      <p class="text-sm text-white/60 mt-4">Precision in Numbers, Vision in Solutions.</p>
-    </div>
-    <div>
-      <h4 class="text-[15px] uppercase text-white/80 tracking-wide">Quick Links</h4>
-      <ul class="mt-3 space-y-2 text-white/70">
-        <li><a href="#home" class="hover:text-white">Home</a></li>
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#about" class="hover:text-white">About</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-[15px] uppercase text-white/80 tracking-wide">Contact</h4>
-      <ul class="mt-3 space-y-3 text-white/70">
-        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-6 h-6 text-white"></i><span>Jl. Dr. Ir. H. Soekarno, Surabaya</span></li>
-        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-6 h-6 text-white"></i><span>+62 851 0199 9516</span></li>
-        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-6 h-6 text-white"></i><span>adaconsulting@gmail.com</span></li>
-      </ul>
-    </div>
+    <div><h3 class="text-2xl font-semibold">THINKLAB</h3><p class="text-sm text-white/70 mt-2">Turning Data Into Direction</p><p class="text-sm text-white/60 mt-4">Precision in Numbers, Vision in Solutions.</p></div>
+    <div><h4 class="text-[15px] uppercase text-white/80 tracking-wide">Quick Links</h4><ul class="mt-3 space-y-2 text-white/70"><li><a href="#home" class="hover:text-white">Home</a></li><li><a href="#services" class="hover:text-white">Services</a></li><li><a href="#about" class="hover:text-white">About</a></li><li><a href="#contact" class="hover:text-white">Contact</a></li></ul></div>
+    <div><h4 class="text-[15px] uppercase text-white/80 tracking-wide">Contact</h4><ul class="mt-3 space-y-3 text-white/70"><li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-6 h-6 text-white"></i><span>Jl. Dr. Ir. H. Soekarno, Surabaya</span></li><li class="flex items-center gap-3"><i data-lucide="phone" class="w-6 h-6 text-white"></i><span>+62 851 0199 9516</span></li><li class="flex items-center gap-3"><i data-lucide="mail" class="w-6 h-6 text-white"></i><span>adaconsulting@gmail.com</span></li></ul></div>
   </div>
-  <div class="border-t border-white/15">
-    <div class="text-center py-6 text-white/70 text-sm">© 2025 THINKLAB. All rights reserved.</div>
-  </div>
+  <div class="border-t border-white/15"><div class="text-center py-6 text-white/70 text-sm">© 2025 THINKLAB. All rights reserved.</div></div>
 </footer>
 
 <!-- Scripts -->
@@ -222,10 +178,11 @@ const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>{
   const y=window.scrollY;
   if(y>50){
-    navbar.className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4 mt-5 bg-white/50 backdrop-blur-xl text-gray-900 rounded-full shadow-md transition-all duration-500 ease-in-out";
+    navbar.className="w-full flex items-center justify-between px-6 py-4 mt-5 bg-white/50 backdrop-blur-xl text-gray-900 rounded-full shadow-md transition-all duration-500 ease-in-out";
   }else{
-    navbar.className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out";
+    navbar.className="w-full flex items-center justify-between px-6 py-4 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out";
   }
+  lucide.createIcons();
 });
 const menuBtn=document.getElementById('menuBtn');
 const mobileMenu=document.getElementById('mobileMenu');
