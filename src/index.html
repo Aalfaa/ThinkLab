@@ -19,32 +19,47 @@
 <!-- NAVBAR -->
 <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out">
   <nav id="navbar"
-       class="w-full flex items-center justify-between px-16 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out">
-    <!-- Logo (lebih ke kanan sedikit) -->
-    <a href="#home" class="flex items-center gap-2 text-2xl font-semibold tracking-wide ml-6">
-      <i data-lucide="brain-circuit" class="w-6 h-6 text-white"></i> THINKLAB
-    </a>
+       class="w-full px-8 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out">
+    <!-- grid 3 kolom untuk keseimbangan -->
+    <div class="grid grid-cols-3 items-center">
+      <!-- KIRI: Logo (tidak terlalu kiri) -->
+      <a href="#home" class="justify-self-start pl-2 flex items-center gap-2 text-2xl font-semibold tracking-wide">
+        <i data-lucide="brain-circuit" class="w-6 h-6 text-white"></i>
+        THINKLAB
+      </a>
 
-    <!-- Menu Tengah -->
-    <ul class="hidden md:flex gap-8 text-[15px] font-medium items-center mx-auto">
-      <li><a href="#home" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="house" class="w-4 h-4"></i>Home</a></li>
-      <li><a href="#services" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="message-square-text" class="w-4 h-4"></i>Services</a></li>
-      <li><a href="#training" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="book-open" class="w-4 h-4"></i>Training</a></li>
-      <li><a href="#about" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="users" class="w-4 h-4"></i>About</a></li>
-      <li><a href="#news" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="newspaper" class="w-4 h-4"></i>News</a></li>
-      <li><a href="#events" class="flex items-center gap-2 hover:text-[#A61C3C] transition"><i data-lucide="briefcase" class="w-4 h-4"></i>Events</a></li>
-      <li>
-        <a href="#contact"
-           class="flex items-center gap-2 bg-[#A61C3C] hover:bg-[#8C1633] text-white px-4 py-2 rounded-full transition">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>Contact
-        </a>
-      </li>
-    </ul>
+      <!-- TENGAH: Menu + Contact (CTA), benar-benar center -->
+      <ul class="hidden md:flex justify-center gap-8 text-[15px] font-medium items-center">
+        <li><a href="#home" class="flex items-center gap-2 hover:text-[#A61C3C] transition">
+          <i data-lucide="house" class="w-4 h-4"></i>Home</a></li>
+        <li><a href="#services" class="flex items-center gap-2 hover:text-[#A61C3C] transition">
+          <i data-lucide="message-square-text" class="w-4 h-4"></i>Services</a></li>
+        <li><a href="#training" class="flex items-center gap-2 hover:text-[#A61C3C] transition">
+          <i data-lucide="book-open" class="w-4 h-4"></i>Training</a></li>
+        <li><a href="#about" class="flex items-center gap-2 hover:text-[#A61C3C] transition">
+          <i data-lucide="users" class="w-4 h-4"></i>About</a></li>
+        <li><a href="#news" class="flex items-center gap-2 hover:text-[#A61C3C] transition">
+          <i data-lucide="newspaper" class="w-4 h-4"></i>News</a></li>
+        <li><a href="#events" class="flex items-center gap-2 hover:text-[#A61C3C] transition">
+          <i data-lucide="briefcase" class="w-4 h-4"></i>Events</a></li>
+        <li>
+          <a href="#contact"
+             class="flex items-center gap-2 bg-[#A61C3C] hover:bg-[#8C1633] text-white px-4 py-2 rounded-full transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>Contact
+          </a>
+        </li>
+      </ul>
 
-    <!-- Tombol Mobile -->
-    <button id="menuBtn" class="md:hidden mr-6">
-      <i data-lucide="menu" class="w-6 h-6"></i>
-    </button>
+      <!-- KANAN: dummy logo (invisible) untuk menyeimbangkan lebar kiri -->
+      <div class="justify-self-end pr-2 md:flex items-center gap-2 opacity-0 pointer-events-none select-none hidden">
+        <i data-lucide="brain-circuit" class="w-6 h-6"></i><span class="text-2xl font-semibold">THINKLAB</span>
+      </div>
+
+      <!-- Tombol Mobile (muncul di kanan saat md:hidden) -->
+      <button id="menuBtn" class="md:hidden justify-self-end pr-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
   </nav>
 
   <!-- Menu Mobile -->
@@ -56,15 +71,20 @@
     <a href="#about" class="py-2 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4"></i>About</a>
     <a href="#news" class="py-2 flex items-center gap-2"><i data-lucide="newspaper" class="w-4 h-4"></i>News</a>
     <a href="#events" class="py-2 flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4"></i>Events</a>
-    <a href="#contact" class="py-2 flex items-center gap-2 bg-[#A61C3C] text-white px-4 rounded-lg"><i data-lucide="message-circle" class="w-4 h-4"></i>Contact</a>
+    <a href="#contact" class="py-2 flex items-center gap-2 bg-[#A61C3C] text-white px-4 rounded-lg">
+      <i data-lucide="message-circle" class="w-4 h-4"></i>Contact</a>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (contoh konten) -->
 <section id="home" class="pt-[120px] min-h-screen flex items-center justify-center text-center px-6">
   <div data-aos="fade-up">
-    <h1 class="text-5xl md:text-6xl font-semibold text-[#2D3142] leading-tight mb-4">Turning Data Into Direction</h1>
-    <p class="text-[#8B8B8B] text-[17px] mb-8">THINKLAB provides professional statistical analysis services — from data survey to consultation.</p>
+    <h1 class="text-5xl md:text-6xl font-semibold text-[#2D3142] leading-tight mb-4">
+      Turning Data Into Direction
+    </h1>
+    <p class="text-[#8B8B8B] text-[17px] mb-8">
+      THINKLAB provides professional statistical analysis services — from data survey to consultation.
+    </p>
     <div class="flex justify-center gap-4">
       <a href="#services" class="bg-[#A61C3C] hover:bg-[#8C1633] text-white px-6 py-3 rounded-lg transition">Our Services</a>
       <a href="#contact" class="border border-[#A61C3C] text-[#A61C3C] hover:bg-[#A61C3C] hover:text-white px-6 py-3 rounded-lg transition">Get Consultation</a>
@@ -72,16 +92,31 @@
   </div>
 </section>
 
-<section class="h-[200vh] bg-white"></section>
+<section class="h-[150vh] bg-white"></section>
 
-<!-- FOOTER -->
+<!-- FOOTER ringkas -->
 <footer class="bg-[#2D3142] text-white">
-  <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
-    <div><h3 class="text-2xl font-semibold">THINKLAB</h3><p class="text-sm text-white/70 mt-2">Turning Data Into Direction</p><p class="text-sm text-white/60 mt-4">Precision in Numbers, Vision in Solutions.</p></div>
-    <div><h4 class="text-[15px] uppercase text-white/80 tracking-wide">Quick Links</h4><ul class="mt-3 space-y-2 text-white/70"><li><a href="#home" class="hover:text-white">Home</a></li><li><a href="#services" class="hover:text-white">Services</a></li><li><a href="#about" class="hover:text-white">About</a></li><li><a href="#contact" class="hover:text-white">Contact</a></li></ul></div>
-    <div><h4 class="text-[15px] uppercase text-white/80 tracking-wide">Contact</h4><ul class="mt-3 space-y-3 text-white/70"><li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-6 h-6 text-white"></i><span>Jl. Dr. Ir. H. Soekarno, Surabaya</span></li><li class="flex items-center gap-3"><i data-lucide="phone" class="w-6 h-6 text-white"></i><span>+62 851 0199 9516</span></li><li class="flex items-center gap-3"><i data-lucide="mail" class="w-6 h-6 text-white"></i><span>adaconsulting@gmail.com</span></li></ul></div>
+  <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+    <div><h3 class="text-2xl font-semibold">THINKLAB</h3><p class="text-sm text-white/70 mt-2">Turning Data Into Direction</p></div>
+    <div><h4 class="text-[15px] uppercase text-white/80 tracking-wide">Quick Links</h4>
+      <ul class="mt-3 space-y-2 text-white/70">
+        <li><a href="#home" class="hover:text-white">Home</a></li>
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#about" class="hover:text-white">About</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div><h4 class="text-[15px] uppercase text-white/80 tracking-wide">Contact</h4>
+      <ul class="mt-3 space-y-3 text-white/70">
+        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-6 h-6 text-white"></i><span>Jl. Dr. Ir. H. Soekarno, Surabaya</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-6 h-6 text-white"></i><span>+62 851 0199 9516</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-6 h-6 text-white"></i><span>adaconsulting@gmail.com</span></li>
+      </ul>
+    </div>
   </div>
-  <div class="border-t border-white/15"><div class="text-center py-6 text-white/70 text-sm">© 2025 THINKLAB. All rights reserved.</div></div>
+  <div class="border-t border-white/15">
+    <div class="text-center py-6 text-white/70 text-sm">© 2025 THINKLAB. All rights reserved.</div>
+  </div>
 </footer>
 
 <!-- Scripts -->
@@ -90,21 +125,25 @@
 AOS.init({duration:900,once:true});
 document.addEventListener('DOMContentLoaded',()=>lucide.createIcons());
 
+// efek scroll: gelap penuh -> putih blur, ada margin top
 const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>{
   const y=window.scrollY;
   if(y>50){
-    navbar.className="w-full flex items-center justify-between px-16 py-3 mt-5 bg-white/50 backdrop-blur-xl text-gray-900 rounded-full shadow-md transition-all duration-500 ease-in-out";
+    navbar.className="w-full px-8 py-3 mt-5 bg-white/50 backdrop-blur-xl text-gray-900 rounded-full shadow-md transition-all duration-500 ease-in-out";
   }else{
-    navbar.className="w-full flex items-center justify-between px-16 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out";
+    navbar.className="w-full px-8 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out";
   }
   lucide.createIcons();
 });
 
+// mobile menu
 const menuBtn=document.getElementById('menuBtn');
 const mobileMenu=document.getElementById('mobileMenu');
-menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
-mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+if(menuBtn){
+  menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+}
 </script>
 
 </body>
