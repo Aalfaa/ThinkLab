@@ -21,7 +21,7 @@
   <nav id="navbar"
        class="w-full px-8 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out">
     <!-- Grid 3 kolom: kiri logo, tengah menu, kanan mirror (tak terlihat) -->
-    <div class="grid grid-cols-3 items-center">
+    <div class="grid grid-cols-3 items-center justify-center">
       <!-- Kiri: LOGO (sedikit masuk dari tepi) -->
       <a href="#home" class="justify-self-start pl-4 flex items-center gap-2 text-2xl font-semibold tracking-wide">
         <i data-lucide="brain-circuit" class="w-6 h-6 text-white"></i>
@@ -49,11 +49,6 @@
           </a>
         </li>
       </ul>
-
-      <!-- Kanan: MIRROR tak terlihat (untuk kesimetrisan) -->
-      <div class="hidden md:flex justify-self-end pr-2 items-center gap-2 opacity-0 pointer-events-none select-none">
-        <i data-lucide="brain-circuit" class="w-6 h-6"></i><span class="text-2xl font-semibold">THINKLAB</span>
-      </div>
 
       <!-- Tombol Mobile (muncul saat md:hidden) -->
       <button id="menuBtn" class="md:hidden justify-self-end pr-2">
