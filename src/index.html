@@ -270,11 +270,33 @@ window.addEventListener("scroll", () => {
 
 const mobileMenu = document.getElementById("mobileMenu");
 if (menuBtn) {
-  menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
-  mobileMenu
-    .querySelectorAll("a")
-    .forEach((a) => a.addEventListener("click", () => mobileMenu.classList.add("hidden")));
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    // cek posisi scroll saat ini
+    const y = window.scrollY;
+    if (!mobileMenu.classList.contains("hidden")) {
+      // jika sedang scroll (navbar putih), ubah warna menu jadi transparan blur
+      if (y > 50) {
+        mobileMenu.className =
+          "md:hidden flex-col bg-white/60 backdrop-blur-xl text-[#2D3142] font-medium px-6 pb-4 transition-all duration-300 rounded-b-2xl shadow-lg";
+      } else {
+        // jika belum scroll (navbar gelap)
+        mobileMenu.className =
+          "md:hidden flex-col bg-[#2D3142]/90 backdrop-blur-md text-white font-medium px-6 pb-4 transition-all duration-300 rounded-b-2xl shadow-lg";
+      }
+    } else {
+      // kalau ditutup, tetap hidden
+      mobileMenu.classList.add("hidden");
+    }
+  });
+
+  // auto-tutup ketika klik link
+  mobileMenu.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => mobileMenu.classList.add("hidden"))
+  );
 }
+
 </script>
 
 </body>
