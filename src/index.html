@@ -234,7 +234,15 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({ duration: 900, once: true });
-document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
+document.addEventListener("DOMContentLoaded", () => {
+  lucide.createIcons();
+
+  // pastikan semua ikon Lucide ikut warna teks induk
+  document.querySelectorAll("svg.lucide").forEach(icon => {
+    icon.classList.add("text-inherit");
+  });
+});
+
 
 const navbar = document.getElementById("navbar");
 const menuBtn = document.getElementById("menuBtn");
