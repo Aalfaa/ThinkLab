@@ -95,9 +95,73 @@
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({ duration: 900, once: true });
-lucide.createIcons();
+document.addEventListener("DOMContentLoaded", () => {
+  lucide.createIcons();
+
+  document.querySelectorAll("svg.lucide").forEach(icon => {
+    icon.classList.add("text-inherit");
+  });
+});
+
+
+const navbar = document.getElementById("navbar");
+const menuBtn = document.getElementById("menuBtn");
+const iconMenu = menuBtn.querySelector("i");
+const logoIcon = document.querySelector("#navbar a i");
+const logoText = document.querySelector("#navbar a span"); 
+
+window.addEventListener("scroll", () => {
+  const y = window.scrollY;
+
+  if (y > 50) {
+    navbar.className =
+      "w-full flex justify-between items-center px-14 py-3 mt-5 bg-white/50 backdrop-blur-xl text-gray-900 rounded-full shadow-md transition-all duration-500 ease-in-out";
+    logoIcon.classList.replace("text-white", "text-gray-900");
+    logoText.classList.replace("text-white", "text-gray-900");
+    iconMenu.classList.replace("text-white", "text-gray-900");
+  } else {
+    navbar.className =
+      "w-full flex justify-between items-center px-14 py-3 bg-[#2D3142] text-white rounded-b-[25px] transition-all duration-500 ease-in-out";
+    logoIcon.classList.replace("text-gray-900", "text-white");
+    logoText.classList.replace("text-gray-900", "text-white");
+    iconMenu.classList.replace("text-gray-900", "text-white");
+  }
+
+});
+
+const mobileMenu = document.getElementById("mobileMenu");
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    // cek posisi scroll saat ini
+    const y = window.scrollY;
+    if (!mobileMenu.classList.contains("hidden")) {
+      // jika sedang scroll (navbar putih), ubah warna menu jadi transparan blur
+      if (y > 50) {
+        mobileMenu.className =
+          "md:hidden flex-col bg-white/60 backdrop-blur-xl text-[#2D3142] font-medium px-6 pb-4 mt-0 transition-all duration-300 rounded-3xl shadow-lg";
+      } else {
+        // jika belum scroll (navbar gelap)
+        mobileMenu.className =
+          "md:hidden flex-col bg-white backdrop-blur-md text-[#2D3142] font-medium px-6 pb-4 mt-2 transition-all duration-300 rounded-3xl shadow-lg";
+      }
+    } else {
+      // kalau ditutup, tetap hidden
+      mobileMenu.classList.add("hidden");
+    }
+  });
+
+  // auto-tutup ketika klik link
+  mobileMenu.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => mobileMenu.classList.add("hidden"))
+  );
+}
+
 </script>
 
 </body>
